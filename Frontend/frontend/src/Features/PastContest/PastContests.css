@@ -1,0 +1,74 @@
+/* PastContests.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #1e3a8a;
+    padding: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .content {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .contest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .contest-card {
+    background: #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .contest-card:hover {
+    background: #cbd5e1;
+  }
+  
+  .contest-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .contest-date {
+    font-size: 14px;
+    color: #4b5563;
+    margin-top: 4px;
+  }
+  
