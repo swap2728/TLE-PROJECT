@@ -1,74 +1,231 @@
-/* PastContests.css */
+/* Apply transition for smooth mode switch */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+/* Default Light Mode */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    background-color: #1e3a8a;
-    padding: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-title {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .content {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 16px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-  
-  .contest-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-  }
-  
-  .contest-card {
-    background: #e2e8f0;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .contest-card:hover {
-    background: #cbd5e1;
-  }
-  
-  .contest-title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .contest-date {
-    font-size: 14px;
-    color: #4b5563;
-    margin-top: 4px;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1a202c; /* Equivalent to bg-gray-900 */
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e3a8a;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode navbar */
+body.dark-mode .navbar {
+  background-color: #111827; /* Equivalent to darker blue-gray */
+}
+
+/* Navbar Container */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar Title */
+.navbar-title {
+  color: white;
+  font-size: 24px;
+  padding: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Content Box */
+.content {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode content */
+body.dark-mode .content {
+  background: #2d3748; /* Equivalent to bg-gray-700 */
+  color: white;
+}
+
+/* Titles */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+h2 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* Dark mode h2 */
+body.dark-mode h2 {
+  color: #90cdf4; /* Lighter blue for dark mode */
+}
+
+/* Contest Grid */
+.contest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* Contest Card */
+.contest-card {
+  background: #e2e8f0;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+
+/* Dark mode contest card */
+body.dark-mode .contest-card {
+  background: #4a5568; /* Equivalent to bg-gray-600 */
+  color: white;
+}
+
+/* Contest Card Hover */
+.contest-card:hover {
+  background: #cbd5e1;
+}
+
+/* Dark mode hover */
+body.dark-mode .contest-card:hover {
+  background: #718096; /* Equivalent to bg-gray-500 */
+}
+
+/* Contest Title */
+.contest-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Contest Date */
+.contest-date {
+  font-size: 14px;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+/* Dark mode contest date */
+body.dark-mode .contest-date {
+  color: #a0aec0; /* Lighter text */
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Pagination Buttons */
+.pagination-btn {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+/* Dark mode pagination */
+body.dark-mode .pagination-btn {
+  background: #4a5568;
+}
+
+/* Hover Effects */
+.pagination-btn:hover {
+  background: #153075;
+}
+
+body.dark-mode .pagination-btn:hover {
+  background: #2d3748;
+}
+
+/* Disabled Button */
+.pagination-btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Active Page Button */
+.pagination-btn.active {
+  background: #ff8c00;
+}
+
+/* Pagination Ellipsis */
+.pagination-ellipsis {
+  color: #4b5563;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Dark mode ellipsis */
+body.dark-mode .pagination-ellipsis {
+  color: #cbd5e1;
+}
+
+/* Toggle Button */
+.toggle {
+  margin-right: auto;
+  /* padding-left: 550px; */
+}
+
+/* Admin Button */
+.admin-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: auto;
+}
+
+/* Dark mode admin button */
+body.dark-mode .admin-btn {
+  background-color: #e53e3e; /* Darker red */
+}
+
+/* Admin Button Hover */
+.admin-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Dark mode hover */
+body.dark-mode .admin-btn:hover {
+  background-color: #9b2c2c;
+}
+
+/* Admin Contests */
+.admin-contests {
+  margin: 10px;
+  margin-left: 15px;
+  padding: 5px;
+}

@@ -1,0 +1,22 @@
+.video-link {
+    display: block;
+    margin-top: 10px;
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.video-link:hover {
+    text-decoration: underline;
+}
+
+.bookmark-btn {
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bookmark-btn:hover {
+    color: gold;
+}
